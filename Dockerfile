@@ -10,4 +10,7 @@ ADD php-src-php-7.2.6 /var/www/localhost/php-src
 
 WORKDIR /var/www/localhost/php-src
 
+#RUN gtags -v && \
+#htags -aosnfvF
+
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND", "-f", "/etc/apache2/httpd.conf"]
