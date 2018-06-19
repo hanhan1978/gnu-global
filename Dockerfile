@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 RUN apk add global --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --allow-untrusted && \
-apk add py-pip ctags && \
+apk add py-pip ctags curl && \
 apk add apache2 perl && \
 mkdir /run/apache2 && \
 pip install Pygments
