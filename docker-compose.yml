@@ -1,0 +1,14 @@
+version: '2'
+services:
+  gnu-global:
+    build: .
+    ports:
+        - "80:80"
+    volumes:
+        - ./htdocs:/var/www/localhost/htdocs
+    networks:
+      app:
+        aliases:
+          - gnuglobal.local
+networks:
+  app:

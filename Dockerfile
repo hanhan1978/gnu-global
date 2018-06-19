@@ -6,10 +6,7 @@ apk add apache2 perl && \
 mkdir /run/apache2 && \
 pip install Pygments
 
-ADD php-src-php-7.2.6 /var/www/localhost/php-src
-
-WORKDIR /var/www/localhost/php-src
-
+ADD httpd.conf /etc/apache2/httpd.conf
 #RUN gtags -v && \
 #htags -aosnfvF
 
